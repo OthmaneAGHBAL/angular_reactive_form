@@ -1,0 +1,33 @@
+<p><strong>First name : </strong>{{myForm.value.firstname}} |#|<strong> Last name : </strong>{{myForm.value.lastname}} |#| <strong> Email : </strong>{{myForm.value.email}} |#| <strong> password : </strong>{{myForm.value.password}} |#| <strong> country : </strong>{{myForm.value.country}}</p>
+
+<form [formGroup]=" myForm" (ngSubmit)="onSubmit()" class="mb-3 container">
+    <div class="form-group">
+      <label for="exampleInputEmail1">First Name :</label>
+      <input type="text" class="form-control" id="firstname" formControlName="firstname" name="firstname"  placeholder="Enter First Name ...">
+    </div>
+    <div class="form-group my-3">
+      <label for="exampleInputEmail1">Last Name :</label>
+      <input type="text" class="form-control" id="lastname" formControlName="lastname" name="lastname"  placeholder="Enter First Name ...">
+    </div>
+    <div class="form-group my-3">
+      <label for="exampleInputEmail1">Email Name :</label>
+      <input type="text" class="form-control" id="email" formControlName="email" name="email"  placeholder="Enter First Name ...">
+    </div>
+    <div class="form-group my-3">
+      <label for="exampleInputEmail1">Password :</label>
+      <input type="password" class="form-control" id="password" formControlName="password" name="password"  placeholder="Enter First Name ...">
+    </div>
+    <div class="form-group my-3">
+        <label for="country" class="mx-3">country </label>
+        <select id="country" name="country" formControlName="country">
+          <option value="1">Maroc</option>
+          <option value="2">Algerie</option>
+          <option value="3">Tunisie</option>
+          <option value="4">egypte</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+    
